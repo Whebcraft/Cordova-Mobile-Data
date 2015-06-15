@@ -1,6 +1,8 @@
 # Cordova-Mobile-Data
 This plugin set / gets the Mobile data state.
 
+This Plugin Requires https://github.com/Whebcraft/System_api.git
+
 Install https://github.com/Whebcraft/Cordova-Mobile-Data.git
 
 ## com.webcraft.mobiledata
