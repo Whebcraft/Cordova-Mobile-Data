@@ -1,42 +1,20 @@
+var exec = require("cordova/exec");
+
 module.exports = {
 
     check: function (success, failure) {
-        cordova.exec(
-            success,
-            failure,
-            "MobileData",
-            'check',
-            []
-        );
+        exec(success, failure, "MobileData", "check", []);
     },
 
     enable: function (success, failure) {
-        cordova.exec(
-            success,
-            failure,
-            "MobileData",
-            'enable',
-            []
-        );
+        exec(success, failure, "MobileData", "enable", []);
     },
 
     disable: function (success, failure) {
-        cordova.exec(
-            success,
-            failure,
-            "MobileData",
-            'disable',
-            []
-        );
+        exec(success, failure, "MobileData", "disable", []);
     },
 
     toggle: function (success, failure) {
-        cordova.exec(
-            success,
-            failure,
-            "MobileData",
-            'toggle',
-            []
-        );
+        exec(success, failure, "MobileData", "toggle", []);
     }
 };
