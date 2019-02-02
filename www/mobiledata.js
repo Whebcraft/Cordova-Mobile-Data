@@ -1,39 +1,39 @@
 module.exports = {
 
-    check:function(args) {
+    check:function(success, failure) {
         cordova.exec(
-            (!args.success) ? null : args.success, 
-            function(error){alert('Mobile Data check Error:'+error)}, 
+            success,
+            failure,
             "mobiledata", 
             'check',
             []
         );
     },
-    
-    enable:function(args) {
+
+    enable:function(success, failure) {
         cordova.exec(
-            (!args.success) ? null : args.success, 
-            function(error){alert('Mobile Data enable Error:'+error)}, 
+            success,
+            failure,
             "mobiledata", 
             'enable',
             []
         );
     },
     
-    disable:function(args) {
+    disable:function(success, failure) {
         cordova.exec(
-            (!args.success) ? null : args.success, 
-            function(error){alert('Mobile Data disable Error:'+error)}, 
+            success,
+            failure,
             "mobiledata", 
             'disable',
             []
         );
     },
     
-    toggle:function(args) {
+    toggle:function(success, failure) {
         cordova.exec(
-            (!args.success) ? null : args.success, 
-            function(error){alert('Mobile Data toggle Error:'+error)}, 
+            success,
+            failure,
             "mobiledata", 
             'toggle',
             []

@@ -3,33 +3,56 @@ This plugin set / gets the Mobile data state.
 
 This Plugin Requires https://github.com/Whebcraft/System_api.git
 
-Install https://github.com/Whebcraft/Cordova-Mobile-Data.git
+##
+
+```bash
+cordova plugin add https://github.com/Whebcraft/Cordova-Mobile-Data.git
+```
 
 ## com.webcraft.mobiledata
 
 ## **Enable:** 
 
-`@return - String, 'enabled'`<br>
-`window.mobiledata.enable({success:dataEnabled});`
+```javascript
+window.mobiledata.enable(function() {
+  // Enabled
+}, function(error) {
+  // Error
+});
+```
 
 ---
 
 ## **Disable:** 
 
-`@return - String, 'disabled'`<br>
-`window.mobiledata.disable({success:dataDisable});`
+```javascript
+window.mobiledata.disable(function() {
+  // Enabled
+}, function(error) {
+  // Error
+});
+```
 
 ---
 
 ## **Toggle:** 
 
-`@return - String, 'enabled/disabled'`<br>
-`window.mobiledata.toggle({success:dataToggle});`
-
+```javascript
+window.mobiledata.toggle(function() {
+  // Enabled
+}, function(error) {
+  // Error
+});
+```
 
 ---
 
 ## **Check:** 
 
-`@return - String, 'enabled/disabled'`<br>
-`window.mobiledata.check({success:dataCheck});`
+```javascript
+window.mobiledata.check(function() {
+  // Enabled
+}, function(error) {
+  // Error
+});
+```

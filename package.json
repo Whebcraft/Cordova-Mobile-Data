@@ -1,6 +1,6 @@
 {
     "name": "cordova-plugin-mobile-data",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Cordova plugin for accessing Android WifiManager",
     "cordova": {
         "id": "cordova-plugin-mobile-data",
