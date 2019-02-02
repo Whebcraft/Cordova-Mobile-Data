@@ -36,40 +36,34 @@ public class mobiledata extends CordovaPlugin {
 
             if (action.equals("check")) {
 
-                if (telephonyManager.getDataState() == TelephonyManager.DATA_CONNECTED) {
-                    callbackContext.success(new JSONObject().put("returnVal", "enabled"));
-                }
+                if (telephonyManager.getDataState() == TelephonyManager.DATA_CONNECTED ||
+                        telephonyManager.getDataState() == TelephonyManager.DATA_SUSPENDED) {
 
-                if (telephonyManager.getDataState() == TelephonyManager.DATA_DISCONNECTED) {
-                    callbackContext.success(new JSONObject().put("returnVal", "disabled"));
-                }
-
-                if (telephonyManager.getDataState() == TelephonyManager.DATA_SUSPENDED) {
-                    callbackContext.success(new JSONObject().put("returnVal", "enabled"));
+                    callbackContext.success(new JSONObject().put("enabled", true));
+                } else if (telephonyManager.getDataState() == TelephonyManager.DATA_DISCONNECTED) {
+                    callbackContext.success(new JSONObject().put("enabled", false));
                 }
             }
 
             if (action.equals("toggle")) {
                 if (telephonyManager.getDataState() == TelephonyManager.DATA_CONNECTED) {
                     setMobileDataEnabledMethod.invoke(iConnectivityManager, false);
-                    callbackContext.success(new JSONObject().put("returnVal", "disabled"));
-                }
-
-                if (telephonyManager.getDataState() == TelephonyManager.DATA_DISCONNECTED) {
+                    callbackContext.success(new JSONObject().put("enabled", false));
+                } else if (telephonyManager.getDataState() == TelephonyManager.DATA_DISCONNECTED) {
                     setMobileDataEnabledMethod.invoke(iConnectivityManager, true);
-                    callbackContext.success(new JSONObject().put("returnVal", "enabled"));
+                    callbackContext.success(new JSONObject().put("enabled", true));
                 }
             }
 
             if (action.equals("enable")) {
                 setMobileDataEnabledMethod.invoke(iConnectivityManager, true);
-                callbackContext.success(new JSONObject().put("returnVal", "enabled"));
+                callbackContext.success(new JSONObject().put("enabled", true));
             }
 
 
             if (action.equals("disable")) {
                 setMobileDataEnabledMethod.invoke(iConnectivityManager, false);
-                callbackContext.success(new JSONObject().put("returnVal", "disabled"));
+                callbackContext.success(new JSONObject().put("enabled", false));
             }
 
         } catch (SecurityException e) {
