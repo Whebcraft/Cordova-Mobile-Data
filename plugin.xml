@@ -1,14 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-mobile-data"
     version="1.0.2">
 
     <name>Mobile Data Controls</name>
-
-    <engines>
-        <engine name="cordova" version=">=3.0.0" />
-    </engines>
 
     <description>This plugin set / gets the Mobile data state.</description>
     <author>Webcraft</author>
@@ -17,7 +13,7 @@
     <license>CC</license>
 
     <js-module src="www/mobiledata.js" name="MobileData">
-        <clobbers target="window.MobileData" />
+        <clobbers target="cordova.plugins.MobileData" />
     </js-module>
 
     <!-- android -->
