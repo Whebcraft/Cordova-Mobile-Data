@@ -1,42 +1,42 @@
 module.exports = {
 
-    check:function(success, failure) {
+    check: function (success, failure) {
         cordova.exec(
             success,
             failure,
-            "mobiledata", 
+            "MobileData",
             'check',
             []
         );
     },
 
-    enable:function(success, failure) {
+    enable: function (success, failure) {
         cordova.exec(
             success,
             failure,
-            "mobiledata", 
+            "MobileData",
             'enable',
             []
         );
     },
-    
-    disable:function(success, failure) {
+
+    disable: function (success, failure) {
         cordova.exec(
             success,
             failure,
-            "mobiledata", 
+            "MobileData",
             'disable',
             []
         );
     },
-    
-    toggle:function(success, failure) {
+
+    toggle: function (success, failure) {
         cordova.exec(
             success,
             failure,
-            "mobiledata", 
+            "MobileData",
             'toggle',
             []
         );
-    }     
+    }
 };
