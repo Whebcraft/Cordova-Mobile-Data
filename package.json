@@ -1,0 +1,22 @@
+{
+    "name": "cordova-plugin-mobile-data",
+    "version": "1.0.2",
+    "description": "Cordova plugin for accessing Android WifiManager",
+    "cordova": {
+        "id": "cordova-plugin-mobile-data",
+        "platforms": [
+            "android"
+        ]
+    },
+    "keywords": [
+        "ecosystem:cordova"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Whebcraft/Cordova-Mobile-Data.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Whebcraft/Cordova-Mobile-Data/issues"
+    },
+    "homepage": "https://github.com/Whebcraft/Cordova-Mobile-Data#readme"
+}

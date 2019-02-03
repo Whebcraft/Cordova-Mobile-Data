@@ -1,42 +1,20 @@
+var exec = require("cordova/exec");
+
 module.exports = {
 
-    check:function(args) {
-        cordova.exec(
-            (!args.success) ? null : args.success, 
-            function(error){alert('Mobile Data check Error:'+error)}, 
-            "mobiledata", 
-            'check',
-            []
-        );
+    check: function (success, failure) {
+        exec(success, failure, "MobileData", "check", []);
     },
-    
-    enable:function(args) {
-        cordova.exec(
-            (!args.success) ? null : args.success, 
-            function(error){alert('Mobile Data enable Error:'+error)}, 
-            "mobiledata", 
-            'enable',
-            []
-        );
+
+    enable: function (success, failure) {
+        exec(success, failure, "MobileData", "enable", []);
     },
-    
-    disable:function(args) {
-        cordova.exec(
-            (!args.success) ? null : args.success, 
-            function(error){alert('Mobile Data disable Error:'+error)}, 
-            "mobiledata", 
-            'disable',
-            []
-        );
+
+    disable: function (success, failure) {
+        exec(success, failure, "MobileData", "disable", []);
     },
-    
-    toggle:function(args) {
-        cordova.exec(
-            (!args.success) ? null : args.success, 
-            function(error){alert('Mobile Data toggle Error:'+error)}, 
-            "mobiledata", 
-            'toggle',
-            []
-        );
-    }     
+
+    toggle: function (success, failure) {
+        exec(success, failure, "MobileData", "toggle", []);
+    }
 };
